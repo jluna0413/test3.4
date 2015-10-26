@@ -1,0 +1,18 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :client %>
+    <%= f.input :description %>
+    <%= f.input :jobstart %>
+    <%= f.input :jobend %>
+    <%= f.input :talenttype %>
+    <%= f.input :payrate %>
+    <%= f.input :jobzip %>
+    <%= f.input :jobaddress %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
