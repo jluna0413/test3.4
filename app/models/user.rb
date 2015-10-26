@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   #->Prelang (user_login/devise)
   has_and_belongs_to_many :jobs
   belongs_to :job
+  has_one :client
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(provider: auth.provider, uid: auth.uid).first
 
