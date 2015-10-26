@@ -45,4 +45,5 @@ class User < ActiveRecord::Base
   devise authentication_keys: [:login]
   validates_formatting_of :phone, using: :us_phone
   validates_formatting_of :zipcode, using: :us_zip
+  acts_as_votable 
 end
